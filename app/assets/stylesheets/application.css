@@ -1,0 +1,48 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ body {
+   text-align: center;
+ }
+
+ header a {
+   position: fixed;
+   top: 30px;
+   left: 30px;
+ }
+
+.todo {
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px 20px;
+}
+
+.todo p {
+  text-align: left;
+  width: 60%;
+}
+
+.todo.done {
+  background-color: lightgray;
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.todo.done input[type="submit"] {
+  pointer-events: none;
+}

@@ -1,0 +1,24 @@
+%h2= @list.name
+-@todos.each do |todo|
+  -task_status = todo.completed ? "done" : ""
+  .todo{class: task_status}
+    
+    %p.todo-task= todo.task
+   
+    =form_tag list_todo_path(@list, todo), method: "put" do 
+      =hidden_field_tag :completed, nil, value: true
+      =submit_tag "done", class: "todo-done"
+
+    =form_tag list_todo_path(@list, todo), method: "delete" do
+      =submit_tag "delete", class: "todo-delete"
+%br
+%br
+%hr
+%br
+=form_tag list_todos_path(@list), method: "post" do
+  =text_field_tag :task, nil, class: "todo-new-input", placeholder: "add new task"
+  =submit_tag "Submit", class: "todo-new-button"
+%br
+
+=form_tag list_path(@list), :method => "delete" do 
+  =submit_tag "Delete List", class: "list-delete-button"  

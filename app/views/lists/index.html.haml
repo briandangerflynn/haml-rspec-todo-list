@@ -1,0 +1,10 @@
+-@lists.each do |list|
+  %p
+    %a= link_to list.name, list_path(list)
+
+%br
+%br
+
+=form_tag lists_path, method: "post" do 
+  =text_field_tag :name, nil, class: "list-new-input", placeholder: "add new list"
+  =submit_tag "Submit", class: "list-new-button"
