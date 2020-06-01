@@ -24,6 +24,18 @@
    left: 30px;
  }
 
+ a {
+   color: blue;
+ }
+
+ h2 {
+   color: blue;
+ }
+
+.todos {
+  margin-bottom: 30px;
+}
+
 .todo {
   border: 1px solid black;
   display: flex;
@@ -35,6 +47,18 @@
 .todo p {
   text-align: left;
   width: 60%;
+}
+
+.todo-new-button,
+.todo-done-button,
+.list-new-button {
+  color: white;
+  background-color: blue;
+}
+
+.todo-delete-button,
+.list-delete-button {
+  background-color: lightcoral;
 }
 
 .todo.done {
